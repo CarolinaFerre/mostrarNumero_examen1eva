@@ -1,0 +1,43 @@
+package examen1;
+import java.util.Scanner;
+
+public class calcularCifras {
+static Scanner sc=new Scanner(System.in);
+
+static int numero;
+static int total;
+static int numero2;
+static int longitud;
+static int contador;
+static int resto;
+static int resu;
+static int division;
+	public static void total(int total) {
+		System.out.println("La cifra es= "+total);
+	}
+	
+
+	public static void main(String[] args) {
+		System.out.println("Introduce números");
+		while(numero!=-1) {
+			numero=sc.nextInt();
+			if(numero!=-1) {
+			total=total*10+numero;
+			}else if(numero==-1) {
+				break;
+			}
+		}
+		calcularCifras.total(total);
+		System.out.println("AHORA HACEMOS AL REVÉS...");
+		System.out.println("Introduce otro número");
+		numero2=sc.nextInt();
+		while(numero2>0) {
+			
+			resto=numero2%10;
+			System.out.println(resto);
+			numero2=Math.abs(numero2/10);
+			
+		}
+	}
+
+}
